@@ -71,7 +71,7 @@ pipeline {
                     steps {
                         sh '''
                             serve -s build &
-                            sleep 10
+                            sleep 10 # Wait for serve to fully start
                             npx playwright test --reporter=html
                         '''
                     }
